@@ -7,10 +7,10 @@
 }
 
 body {
-  font-family:Poppins sans-serif;
+  font-family:Poppins, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1D1F20;;
+  background-color: #1D1F20;
   color: rgb(238, 238, 255);
 }
 
