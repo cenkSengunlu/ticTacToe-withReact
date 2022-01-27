@@ -1,13 +1,100 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Poppins;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1D1F20;;
+  color: rgb(238, 238, 255);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 25px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.board{
+  text-align:center;
+  margin:auto;
+  width: 370px;
+  height: 370px;
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  background-size: 300% 300%;
+  animation: animatedgradient 3s ease alternate infinite;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+@keyframes animatedgradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.square{
+  height:120px;
+  width:120px;
+  font-size: 50px;
+  background: #1D1F20;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.App{
+  width:80%;
+  margin:auto;
+}
+
+.header{
+  text-align:center;
+  font-size:40px;
+  text-shadow: 2px 2px 4px #bbb;
+  margin: 50px 0;
+}
+
+.hide{
+  display:none;
+};
+
+.winner{
+  background-color: green;
+}
+
+@media (max-width: 460px) {
+
+  .board {
+    width: 100vw;
+    height: 100vw;
+  }
+
+  .square{
+    width: calc((100vw - 10px) / 3);
+    height: calc((100vw - 10px) / 3);
+    font-size: 10vw;
+  }
+
+  .App{
+    width: 100%;
+  }
 }
