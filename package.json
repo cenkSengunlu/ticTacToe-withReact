@@ -1,5 +1,6 @@
 {
   "name": "tictactoe",
+  "homepage": "https://cenksengunlu.github.io/ticTacToe-withReact",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
