@@ -10,11 +10,17 @@ const Board = () => {
   const [xIsNext, setXisNext] = useState(true);
   const winner = calculateWinner(square);
 
-  // Board'daki her bir Square componen'ını render eden fonksiyon
+  // Board'daki her bir Square component'ını render eden fonksiyon
   const renderSquare = (i) => {
     return(
-      <Square val={square[i]} onClick={() => handleClick(i)} />
+      <Square val={square[i]} winner={winner.winnerSquare.includes(i)} onClick={() => handleClick(i)} />
     );
+  }
+
+  const resetGame = () => {
+    const squares = Array(9).fill(null);
+    setSqure(squares);
+    setXisNext(xIsNext);
   }
 
   // Square componen'ına tıklanınca çalışacak olan fonksiyon
@@ -44,6 +50,7 @@ const Board = () => {
   
   return(
     <div>
+      <h2>{status}</h2>
       <div className="board">
         {renderSquare(0)}
         {renderSquare(1)}
@@ -55,7 +62,9 @@ const Board = () => {
         {renderSquare(7)}
         {renderSquare(8)}
       </div>
-      <h2>{status}</h2>
+      {
+        (winner.winner) && <button className="btn" onClick={() => resetGame()}>PLAY AGAIN</button>
+      }
     </div>
     
     
