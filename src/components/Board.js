@@ -17,13 +17,14 @@ const Board = () => {
     );
   }
 
+  // Board component'ındaki Square component'larını sıfırlayıp oyunu yeniden başlatan fonksiyon
   const resetGame = () => {
     const squares = Array(9).fill(null);
     setSqure(squares);
     setXisNext(xIsNext);
   }
 
-  // Square componen'ına tıklanınca çalışacak olan fonksiyon
+  // Square component'ına tıklanınca çalışacak olan fonksiyon
   const handleClick = (i) => {
     const squares = [...square];
 
