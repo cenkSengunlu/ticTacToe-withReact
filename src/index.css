@@ -160,7 +160,7 @@ code {
   }
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 1920px) {
 
   .board {
     width: 610px;
