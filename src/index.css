@@ -33,7 +33,7 @@ code {
   background-size: 300% 300%;
   animation: animatedgradient 3s ease alternate infinite;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0,1fr));
   grid-gap: 5px;
 }
 
